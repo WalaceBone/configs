@@ -16,7 +16,7 @@ require("config.options")
 require("config.keymaps")
 local opts = {
 	defaults = {
-		lazy = true
+		lazy = false,
 	},
 	install = {
 		colorscheme = { "one-dark" }

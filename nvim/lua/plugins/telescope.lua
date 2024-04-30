@@ -30,7 +30,7 @@ end
 
 return {
   "nvim-telescope/telescope.nvim",
-  lazy = false,
+  lazy = true,
   dependencies = { "nvim-lua/plenary.nvim" },
   config = config,
   key = {
