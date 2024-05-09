@@ -3,7 +3,7 @@ local config = function()
   local telescope = require('telescope')
   telescope.setup({
     defaults = {
-      mapping = {
+      mappings = {
         i = {
           ["<C-j>"] = "move_selection_next",
           ["<C-k>"] = "move_selection_previous",
@@ -13,16 +13,16 @@ local config = function()
     pickers = {
       find_files = { 
         theme = "dropdown", 
-        previewer = false,
+        previewer = true,
         hidden = true,
       },
       live_grep = {
         theme = "dropdown",
-        previewer = false,
+        previewer = true,
       },
       find_buffers = {
         theme = "dropdown",
-        previewer = false,
+        previewer = true,
       },
     },
   })
@@ -30,9 +30,10 @@ end
 
 return {
   "nvim-telescope/telescope.nvim",
-  lazy = true,
+  tag = "0.1.6",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = config,
+  lazy = false,
   key = {
     keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),
     keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>"),
